@@ -32,6 +32,82 @@
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.16.0.2.2.5.2-1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "35a9cf93-d393-3dee-9588-fae4173d51d1",
+          "identifier" : "f83bc1ad-79b0-3205-bcba-67a81806be54",
+          "instanceIdentifier" : "eafa09b2-0183-1000-ffff-fffffad89360",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "AttributesToCSV",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 807.0,
+            "y" : 710.0
+          },
+          "properties" : {
+            "null-value" : "false",
+            "include-core-attributes" : "true",
+            "destination" : "flowfile-attribute",
+            "include-schema" : "false"
+          },
+          "propertyDescriptors" : {
+            "null-value" : {
+              "displayName" : "Null Value",
+              "identifiesControllerService" : false,
+              "name" : "null-value",
+              "sensitive" : false
+            },
+            "include-core-attributes" : {
+              "displayName" : "Include Core Attributes",
+              "identifiesControllerService" : false,
+              "name" : "include-core-attributes",
+              "sensitive" : false
+            },
+            "attributes-regex" : {
+              "displayName" : "Attributes Regular Expression",
+              "identifiesControllerService" : false,
+              "name" : "attributes-regex",
+              "sensitive" : false
+            },
+            "destination" : {
+              "displayName" : "Destination",
+              "identifiesControllerService" : false,
+              "name" : "destination",
+              "sensitive" : false
+            },
+            "include-schema" : {
+              "displayName" : "Include Schema",
+              "identifiesControllerService" : false,
+              "name" : "include-schema",
+              "sensitive" : false
+            },
+            "attribute-list" : {
+              "displayName" : "Attribute List",
+              "identifiesControllerService" : false,
+              "name" : "attribute-list",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.AttributesToCSV",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
             "artifact" : "nifi-cybersecurity-nar",
             "group" : "org.apache.nifi",
             "version" : "1.16.0.2.2.5.2-1"
