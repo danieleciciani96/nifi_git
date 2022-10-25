@@ -1,5 +1,12 @@
 flows:
-  22442f47-3cf0-486a-bd21-e181f577b027: {ver: 2, file: cicd.snapshot, comments: adjusting
-      parans, author: dciciani, created: 1666692604250, flowName: cicd, flowDesc: ''}
+  22442f47-3cf0-486a-bd21-e181f577b027:
+    ver: 3
+    file: cicd.snapshot
+    comments: |
+      add a new processor to check diff
+    author: dciciani
+    created: 1666702644014
+    flowName: cicd
+    flowDesc: ''
 layoutVer: 1
 bucketId: a4efa447-b6e4-494f-aaee-76308474b1c7
