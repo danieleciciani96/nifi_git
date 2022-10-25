@@ -124,6 +124,39 @@
           "destination" : {
             "comments" : "",
             "groupId" : "6c4d0f3b-3fb1-3157-ac0e-1e3ccf858f91",
+            "id" : "da65bf72-fa6a-3d3c-ba55-522280a27020",
+            "instanceIdentifier" : "3dd93b5a-b524-1671-86ff-62a619cdf42d",
+            "name" : "MergeRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "6c4d0f3b-3fb1-3157-ac0e-1e3ccf858f91",
+          "identifier" : "a22ade8b-387c-3977-aee0-9911b519dcbd",
+          "instanceIdentifier" : "0e9a95d5-0184-1000-ffff-ffffd0a1afd1",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "6c4d0f3b-3fb1-3157-ac0e-1e3ccf858f91",
+            "id" : "5825ec48-005a-314c-b203-dd56b72c26b5",
+            "instanceIdentifier" : "e3143e46-1c21-1d85-93ef-46bd00d08653",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "6c4d0f3b-3fb1-3157-ac0e-1e3ccf858f91",
             "id" : "33045af7-79b1-3748-b55c-35f15196febf",
             "instanceIdentifier" : "45d83fb5-6fc3-11d6-80a6-ee4b81f88566",
             "name" : "Funnel",
@@ -190,9 +223,10 @@
         "labels" : [ ],
         "name" : "testing_cicd",
         "outputPorts" : [ ],
+        "parameterContextName" : "test",
         "position" : {
-          "x" : 785.292220488906,
-          "y" : 213.47307791667566
+          "x" : 728.0,
+          "y" : 56.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -305,7 +339,6 @@
           "properties" : {
             "FullControl User List" : "${s3.permissions.full.users}",
             "Owner" : "${s3.owner}",
-            "Access Key" : "#{access_key}",
             "s3-object-remove-tags-prefix" : "false",
             "Multipart Upload Max Age Threshold" : "7 days",
             "canned-acl" : "${s3.permissions.cannedacl}",
@@ -318,7 +351,7 @@
             "use-chunked-encoding" : "true",
             "Object Key" : "/user/dciciani/out.txt",
             "Multipart Threshold" : "5 GB",
-            "Bucket" : "ps-uat2",
+            "Bucket" : "#{bucket}",
             "Multipart Upload AgeOff Interval" : "60 min",
             "use-path-style-access" : "false",
             "Write Permission User List" : "${s3.permissions.write.users}",
@@ -691,7 +724,24 @@
         "variables" : { }
       },
       "flowEncodingVersion" : "1.0",
-      "parameterContexts" : { }
+      "parameterContexts" : {
+        "test" : {
+          "componentType" : "PARAMETER_CONTEXT",
+          "inheritedParameterContexts" : [ ],
+          "name" : "test",
+          "parameters" : [ {
+            "description" : "",
+            "name" : "access_key",
+            "sensitive" : false,
+            "value" : "32109ds"
+          }, {
+            "description" : "",
+            "name" : "bucket",
+            "sensitive" : false,
+            "value" : "ps-uat2"
+          } ]
+        }
+      }
     }
   }
 }
