@@ -23,7 +23,7 @@
         "name" : "cicd",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 432.0,
+          "x" : 344.0,
           "y" : 432.0
         },
         "processGroups" : [ ],
@@ -200,6 +200,49 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.CalculateRecordStats",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.16.0.2.2.5.2-1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "039627bf-e884-3aaa-a680-fa1f489e5a62",
+          "identifier" : "ba851c34-b695-3cfd-a108-3c6ed4751b6f",
+          "instanceIdentifier" : "38e32692-0184-1000-0000-00002c7671d8",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "Base64EncodeContent",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 527.9383235551892,
+            "y" : 506.3639266276674
+          },
+          "properties" : {
+            "Mode" : "Encode"
+          },
+          "propertyDescriptors" : {
+            "Mode" : {
+              "displayName" : "Mode",
+              "identifiesControllerService" : false,
+              "name" : "Mode",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.Base64EncodeContent",
           "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
